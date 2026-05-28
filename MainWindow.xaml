@@ -1,0 +1,65 @@
+﻿<Window x:Class="ChatbotPart2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatbotPart2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#5A5A5A">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Row 0: Header with bot name and ASCII art -->
+        <Border Grid.Row="0" Background="#4D4D4D" Padding="12" CornerRadius="6" Margin="8">
+            <StackPanel>
+                <TextBlock Text="CyberBot" FontSize="20" FontWeight="Bold" Foreground="White" />
+                <TextBlock FontFamily="Consolas" Foreground="White" FontSize="12" TextWrapping="Wrap" xml:space="preserve">
+                    <Run>
+                        <![CDATA[
+   ███████╗ █████╗ ███████╗███████╗███╗   ██╗███████╗████████╗
+   ██╔════╝██╔══██╗██╔════╝██╔════╝████╗  ██║██╔════╝╚══██╔══╝
+   ███████╗███████║█████╗  █████╗  ██╔██╗ ██║█████╗     ██║   
+   ╚════██║██╔══██║██╔══╝  ██╔══╝  ██║╚██╗██║██╔══╝     ██║   
+   ███████║██║  ██║██║     ███████╗██║ ╚████║███████╗   ██║   
+   ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═══╝╚══════╝   ╚═╝   
+        
+          ╔══════════════════════════════════════════╗
+          ║     S A F E N E T   A S S I S T A N T    ║
+          ║      Your Cybersecurity Guide & Buddy    ║
+          ╚══════════════════════════════════════════╝
+                        ]]>
+                    </Run>
+                </TextBlock>
+            </StackPanel>
+        </Border>
+
+        <!-- Row 1: ScrollViewer containing chat display TextBlock -->
+        <Border Grid.Row="1" Background="#404040" Padding="8" Margin="8" CornerRadius="6">
+            <ScrollViewer x:Name="ChatScrollViewer" VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="ChatTextBlock" Foreground="White" TextWrapping="Wrap" FontFamily="Consolas" FontSize="13" />
+            </ScrollViewer>
+        </Border>
+
+        <!-- Row 2: Input row with TextBox and Send Button -->
+        <Border Grid.Row="2" Background="#021826" Padding="8" Margin="8" CornerRadius="6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="InputTextBox" Grid.Column="0" Height="34" Margin="0,0,8,0"
+                         Background="#4D4D4D" Foreground="White" BorderBrush="White" CaretBrush="White"
+                         VerticalContentAlignment="Center" FontFamily="Consolas" FontSize="13"
+                         KeyDown="InputTextBox_KeyDown" />
+
+                <Button x:Name="SendButton" Grid.Column="1" Width="90" Height="34" Content="Send"
+                        Background="White" Foreground="#5A5A5A" FontWeight="Bold" Click="SendButton_Click" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

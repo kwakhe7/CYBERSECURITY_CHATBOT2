@@ -1,0 +1,68 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!--
+    Simple original vector logo (stylized spider-like mark).
+    Safe to use — not based on any trademarked artwork.
+    Scales cleanly at any DPI because it's vector-based.
+  -->
+
+  <DrawingImage x:Key="AppLogo">
+    <DrawingImage.Drawing>
+      <DrawingGroup>
+
+        <!-- body (dark red) -->
+        <GeometryDrawing Brush="#C62828" Pen="{x:Null}">
+          <GeometryDrawing.Geometry>
+            <EllipseGeometry Center="50,40" RadiusX="30" RadiusY="22"/>
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+
+        <!-- head (dark) -->
+        <GeometryDrawing Brush="#212121" Pen="{x:Null}">
+          <GeometryDrawing.Geometry>
+            <EllipseGeometry Center="50,24" RadiusX="12" RadiusY="10"/>
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+
+        <!-- stylized legs (black strokes) -->
+        <GeometryDrawing Brush="{x:Null}">
+          <GeometryDrawing.Pen>
+            <Pen Brush="Black" Thickness="2" />
+          </GeometryDrawing.Pen>
+          <GeometryDrawing.Geometry>
+            <GeometryGroup>
+
+              <!-- left upper -->
+              <PathGeometry Figures="M22,32 C14,26 12,18 24,16"/>
+
+              <!-- right upper -->
+              <PathGeometry Figures="M78,32 C86,26 88,18 76,16"/>
+
+              <!-- left middle -->
+              <PathGeometry Figures="M28,44 C16,46 12,54 22,62"/>
+
+              <!-- right middle -->
+              <PathGeometry Figures="M72,44 C84,46 88,54 78,62"/>
+
+              <!-- left lower -->
+              <PathGeometry Figures="M36,58 C28,74 22,84 18,94"/>
+
+              <!-- right lower -->
+              <PathGeometry Figures="M64,58 C72,74 78,84 82,94"/>
+
+            </GeometryGroup>
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+
+        <!-- small accent / fang -->
+        <GeometryDrawing Brush="Black" Pen="{x:Null}">
+          <GeometryDrawing.Geometry>
+            <PathGeometry Figures="M44,48 L50,60 L56,48 Z"/>
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+</ResourceDictionary>
