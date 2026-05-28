@@ -10,3 +10,5 @@ Developed the custom splash screen system with dynamic runtime logo loading. Add
 Added audio greeting functionality through a reusable AudioPlayer utility class. Implemented synchronous and asynchronous WAV playback methods, included exception handling for audio errors, and created automatic test greeting WAV generation for improved startup interaction.
 
 Implemented the core chatbot response engine with keyword-based cybersecurity topic detection. Added multiple cybersecurity awareness categories including phishing, malware, passwords, ransomware, privacy, backups, MFA, scams, social engineering, and IoT security together with randomized responses for more natural conversations.
+
+Enhanced the chatbot with sentiment analysis, emotion detection, and personalized interactions. Added rule-based positive and negative sentiment scoring, emotion recognition for different moods, adaptive tone adjustments, user name memory, and favorite topic tracking to create a more intelligent and engaging chatbot experience.
